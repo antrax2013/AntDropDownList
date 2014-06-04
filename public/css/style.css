@@ -43,9 +43,9 @@ header, footer {
     background-image: linear-gradient(top, #696969 0%,#363636 95%,#313131 97%,#252525 100%);
 }
 
-strong, mark, em {
+p, strong, mark, em {
 	color: #333;
-    font-size: .85em;
+    font-size: 100%;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
@@ -154,7 +154,6 @@ footer {
     clear: both;
     padding-bottom: 35px;
     min-height: 40em;
-	width:100%;
 }
 
 /* forms */

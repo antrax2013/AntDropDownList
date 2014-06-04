@@ -1,8 +1,9 @@
 <?php
-class item {
-	public $Value;
-	public $Text;
-	public $Selected;
+class item 
+{
+	public $Value="";
+	public $Text="";
+	public $Selected=false;
 	
 	public function __construct($a_value, $a_text, $a_selected=false)
     {

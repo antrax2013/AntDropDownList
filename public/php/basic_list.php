@@ -1,6 +1,7 @@
 <?php
 
-include_once 'item.php';
+include 'item.php';
+require 'jsonwrapper/jsonwrapper.php';
 
 // Prevent caching.
 //header('Cache-Control: no-cache, must-revalidate');
