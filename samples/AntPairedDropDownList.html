@@ -3,7 +3,7 @@
     <head>
 		<meta charset="utf-8" />
         <title>Basic usage of AntDropDownList - AntProduction</title>
-		<meta content="AntDropDownList is part of AntLibrairies. AntMessageBox is a pre-defined jQuery ui-dialog encapsulated in JavaScript object." name="description">
+		<meta content="AntPairedDropDownList is part of AntLibrairies. AntPairedDropDownList are a pre-defined jQuery ui-dialog encapsulated in JavaScript object. The slave drop down list is filtred on change event of master drop down list fired." name="description">
 		<meta content="antproduction, jquery ui library, jquery, turnkey jquery ui library, javascript library, drop down list" name="keywords">
 		<meta name="author" content="Antrax2013">
 		
@@ -17,6 +17,7 @@
 		<script type="text/javascript" src="../public/js/libs/external-libs/jquery-ui-1.10.4.min.js"></script>		
 		<script type="text/javascript" src="../public/js/libs/external-libs/google-analytics.js"></script>
 		<script type="text/javascript" src="../public/js/libs/AntDropDownList.js"></script>
+		<script type="text/javascript" src="../public/js/libs/AntPairedDropDownList.js"></script>
 
 		
 		<script>
@@ -25,7 +26,10 @@
 			hljs.initHighlightingOnLoad();
 						
 			$(document).ready(function() {
-				LoadAntDropDownList($("#myList"), "../public/php/basic_list.php", true, 1);				
+				LoadAntDropDownList($("#masterList"), "../public/php/basic_list.php", true, 1);
+				
+				var DDLs = new AntPairedDropDownList();
+				DDLs.initPairedDropDownList($("#masterList"), $("#slaveList"), "../public/php/cities_list.php", true, 1);
 			});
 		</script>
 	</head>
@@ -48,7 +52,8 @@
 			<section class="content-wrapper">
 				<p>AntDropDownList, is a custom DropDownList jQuery plugin. The aim is to supply easly a drop down list without dupplicate ajax parameters.</p>
 				
-				<select id="myList"></select>
+				<select id="masterList"></select>
+				<select id="slaveList"></select>
 			</section>
 			<section class="content-wrapper">
 				<h2>Source Code</h2>

@@ -36,26 +36,27 @@ var AntPairedDropDownList = function () {
 	/// <remarks> 
 	/// Par défaut le chargement se fait en ajax.
     /// </remarks>
-		var ID = $(this).val();
-
+		var ID = _FromDropDownList.val();
+		
 		//Chargement des données
 		if (ID != null && !isNaN(ID)) {
 			_ToDropDownList.empty();
 			$.ajax({
 				type: "POST",
-				async: false, //En mode synchrone
+				//async: false, //En mode synchrone
 				url: _UrlActionControler,
-				dataType: "JSON",
+				dataType: "json",
 				contentType: "application/json; charset=utf-8",
-				data: JSON.stringify({ 'parent': ID }),
+				data: JSON.stringify({'parent' :ID }),
 				success: function (retour) {
+				
 					if (_withEmptyEntry == true) {
 						_ToDropDownList.append($("<option />").val("").text(""));
 					}
 
 					//Création de la liste des options
 					$.each(retour.d, function () {
-						_ToDropDownList.append($("<option />").val(this.Value).text(this.Text.HtmlDecode()));
+						_ToDropDownList.append($("<option />").val(this.Value).text(this.Text));
 						if (this.Selected || this.Value == _selectedValue) _ToDropDownList.val(this.Value);
 						_ToDropDownList.change();
 					});
@@ -78,20 +79,22 @@ var AntPairedDropDownList = function () {
         /// <param name="ToDropDownList" type="Handdle Jquery">Handdle sur la liste destination</param>
         /// <param name="ActionControler" type="String">L'action du controler a appeler</param>
         /// <param name="withEmptyEntry" type="Boolean">Option ajoutant une ligne vide en début de liste</param>
-
+		
         //Stockage des paramètres
         _FromDropDownList = $(FromDropDownList);
         _ToDropDownList = $(ToDropDownList);
         _UrlActionControler = ActionControler;
         _withEmptyEntry = withEmptyEntry != false ? true : false;
-        _selectedValue = selectedValue;
+        _selectedValue = selectedValue != undefined? selectedValue : null;
 
         //Bind du change
         _ToDropDownList.change(function () { _ToDropDownListChange(); });
-        _FromDropDownList.change(function () { _FromDropDownListChange(); });        
-
+        _FromDropDownList.change(function () { _FromDropDownListChange(); });  
+		
         //Lancement de la mise à jour au chargement si une valeur par défaut est définie
-        if (_selectedValue != null) _FromDropDownList.change();
+        if (_selectedValue != null) {
+			_FromDropDownList.change();
+		}
     }    
 
     //Méthode forçant les valeurs et la mise à jour des DDL
