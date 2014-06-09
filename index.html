@@ -41,11 +41,14 @@
 			<section class="content-wrapper">
 				<p>AntDropDownList, is a custom DropDownList jQuery plugin.</p>				
 				<ul>
-					2 avaible types of AntDropDownList:
-					<li><a href="#Samples">AntDropDownList</a>: basic trunkey drop down list.</li>
-					<li><a href="#Samples">AntPairedDropDownList</a>: master and slave drop down lists. Slave drop down list is filtred on change event of master drop down list fired. <span class="type">[avaible soon]</span></li>
+					2 avaliable types of AntDropDownList:
+					<li><a href="#Samples_AntDropDownList">AntDropDownList</a>: basic trunkey drop down list.</li>
+					<li><a href="#Samples_AntPairedDropDownList">AntPairedDropDownList</a>: master and slave drop down lists. Slave drop down list is filtred on change event of master drop down list fired.</li>
 				</ul>
 			</section>
+			<br />
+			<hr />
+			<br />
 			<section class="content-wrapper">
 				<h2>AntDropDownList</h2>
 				<p>It's basic trunkey drop down list. Elements are loaded by ajax.</p>
@@ -80,7 +83,7 @@
 			</section>
 			
 			<section class="content-wrapper">
-				<h2 id="Samples">Samples</h2>
+				<h2 id="Samples_AntDropDownList">Samples</h2>
 				<table>
 					<tr>
 						<th colspan="2">AntDropDownList</th>
@@ -88,6 +91,89 @@
 					<tr>
 						<td>Basic usage of AntDropDownList</td>
 						<td><a href="samples/AntDropDownList.html" target="_blank">Try it</a></td>					
+					</tr>			
+				</table>			
+			</section>
+			<br />
+			<hr />
+			<br />
+			<section class="content-wrapper">
+				<h2 id="AntPairedDropDownList">AntPairedDropDownList</h2>
+				<p>JavaScript object to manage simply master and slave relation of 2 drop down lists. When master change event fired, the slave drop down list is filtred.</p>
+
+				<table>
+					<tr>
+						<th>Methods</th>
+						<th colspan='2'>Parameters</th>
+					</tr>
+					<!-- AntDropDownList -->
+					<tr>
+						<td rowspan='5'>
+							<strong>initPairedDropDownList</strong>
+							<br /><span class="description">Method to cunstruct JavaScript object and define settings.</span>
+						</td>
+						<td>p_fromDropDownList <span class="type">[jQuery handdle]</span></td>
+						<td><span class="description">The master drop down list. A jQuery handdle of selected tag of DOM. In this version, the selected tag must be a select html tag.</span></td>					
+					</tr>
+					<tr>
+						<td>p_toDropDownList <span class="type">[jQuery handdle]</span></td>
+						<td><span class="description">The slave drop down list. In this version, the selected tag must be a select html tag.</span></td>					
+					</tr>
+					<tr>
+						<td>p_actionControler <span class="type">[optionnal boolean]</span></td>
+						<td><span class="description">Url of ajax method to fill slave drop down list.</span></td>					
+					</tr>
+					<tr>
+						<td>p_withEmptyEntry <span class="type">[optionnal boolean]</span></td>
+						<td><span class="description">Boolean to define if empty entry is required. False by default</span></td>					
+					</tr>
+					<tr>
+						<td>p_selectedValue <span class="type">[optionnal integer]</span></td>
+						<td><span class="description">The selected value. Current selected value of master drop down list by default</span></td>					
+					</tr>
+					
+					<tr>
+						<td rowspan='2'>
+							<strong>ForceValues</strong>
+							<br /><span class="description">Method to force value of drop down lists.</span>
+						</td>
+						<td>p_valFromDDL <span class="type">[integer]</span></td>
+						<td><span class="description">The value of master drop down list</span></td>					
+					</tr>
+					<tr>
+						<td>p_valToDDL <span class="type">[integer]</span></td>
+						<td><span class="description">The value of slave drop down list</span></td>					
+					</tr>
+					
+					<tr>
+						<td rowspan='1'>
+							<strong>FromDropDownListChange</strong>
+							<br /><span class="description">An accessor to define a custom callback function to change event of master drop down list </span>
+						</td>
+						<td>p_fn <span class="type">[function]</span></td>
+						<td><span class="description">The callback function fired on change event of master drop down list</span></td>					
+					</tr>
+					
+					<tr>
+						<td rowspan='1'>
+							<strong>ToDropDownListChange</strong>
+							<br /><span class="description">An accessor to define a custom callback function to change event of slave drop down list</span>
+						</td>
+						<td>p_fn <span class="type">[function]</span></td>
+						<td><span class="description">The callback function fired on change event of slave drop down list</span></td>					
+					</tr>				
+					
+				</table>
+			</section>
+			<section class="content-wrapper">
+				<h2 id="Samples_AntPairedDropDownList">Samples</h2>
+				<table>
+					<tr>
+						<th colspan="2">AntPairedDropDownList</th>
+					</tr>
+					<tr>
+						<td>Basic usage of AntPairedDropDownList</td>
+						<td><a href="samples/AntPairedDropDownList.html" target="_blank">Try it</a></td>					
 					</tr>			
 				</table>			
 			</section>

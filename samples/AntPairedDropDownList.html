@@ -26,9 +26,13 @@
 			hljs.initHighlightingOnLoad();
 						
 			$(document).ready(function() {
+			
+				//Creation of master drop down list
 				LoadAntDropDownList($("#masterList"), "../public/php/basic_list.php", true, 1);
 				
+				//Custruction of javascript object to manage master and slave relation
 				var DDLs = new AntPairedDropDownList();
+				//Set parameters
 				DDLs.initPairedDropDownList($("#masterList"), $("#slaveList"), "../public/php/cities_list.php", true, 1);
 			});
 		</script>
@@ -55,11 +59,18 @@
 				<select id="masterList"></select>
 				<select id="slaveList"></select>
 			</section>
+			
 			<section class="content-wrapper">
 				<h2>Source Code</h2>
 				<pre><code style="background-color:#fff">
 $(document).ready(function() {
-	LoadAntDropDownList($("#myList"), "../public/php/basic_list.php", true, 1);
+	//Creation of master drop down list
+	LoadAntDropDownList($("#masterList"), "../public/php/basic_list.php", true, 1);
+	
+	//Custruction of javascript object to manage master and slave relation
+	var DDLs = new AntPairedDropDownList();
+	//Set parameters
+	DDLs.initPairedDropDownList($("#masterList"), $("#slaveList"), "../public/php/cities_list.php", true, 1);
 });	
 						</code>
 					</pre>
