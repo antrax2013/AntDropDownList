@@ -11,7 +11,9 @@ AntDropDownList, is turnkey JavaScript object to create a drop down list. The li
 
 Have a question about AntDropDownList or AntPairedDropDownList ? Please use GitHub Issue. 
 
+<b>To try samples of AntPairedDropDownList on your cumputer, PHP web server is required.</b>
 
-AntPairedDropDownList Release Note: V0.11 - 05/29/2014
+
+AntPairedDropDownList Release Note: V0.11 - 06/09/2014
 =============
 - Add accessors to custom callback functions fired on change event of lists
