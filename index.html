@@ -26,22 +26,19 @@
 		<header>
 			<section class="content-wrapper">
 				<div class="float-left">
-					<p>
 						<h1 class="site-title">AntDropDownList library</h1>
-						<br/><span class="library-version">v0.1 - 05/31/2014</span>
-					</p>
-					
+						<br/><span class="library-version">v0.11 - 06/29/2014</span>
 				</div>
 				<div class="float-right">
-					<a href="http://antproduction.free.fr/" border="0" title="AntProduction. Set once, daily use"><img src="public/images/antproduction-logo-blue-159x35.png" alt="logo of AntProduction. Set once, daily use" /></a>
+					<a href="http://antproduction.free.fr/" title="AntProduction. Set once, daily use"><img src="public/images/antproduction-logo-blue-159x35.png" alt="logo of AntProduction. Set once, daily use" /></a>
 				</div>
 			</section>
 		</header>
 		<article class="main-content clear-fix" id="body">
 			<section class="content-wrapper">
-				<p>AntDropDownList, is a custom DropDownList jQuery plugin.</p>				
+				<p>AntDropDownList, is a custom DropDownList jQuery plugin.</p>
+                <p>2 avaliable types of AntDropDownList:</p>
 				<ul>
-					2 avaliable types of AntDropDownList:
 					<li><a href="#Samples_AntDropDownList">AntDropDownList</a>: basic trunkey drop down list.</li>
 					<li><a href="#Samples_AntPairedDropDownList">AntPairedDropDownList</a>: master and slave drop down lists. Slave drop down list is filtred on change event of master drop down list fired.</li>
 				</ul>
@@ -60,25 +57,29 @@
 					</tr>
 					<!-- AntDropDownList -->
 					<tr>
-						<td rowspan='4'>
+						<td rowspan='5'>
 							<strong>LoadAntDropDownList</strong>
 							<br /><span class="description">Single method to fill drop down list by ajax</span>
 						</td>
-						<td>$cible <span class="type">[jQuery handdle]</span></td>
+						<td>$p_elment <span class="type">[jQuery handdle]</span></td>
 						<td><span class="description">A jQuery handdle of selected tag of DOM. In this version, the selected tag must be a select html tag.</span></td>					
 					</tr>
 					<tr>
-						<td>UrlActionControler <span class="type">[string]</span></td>
+						<td>p_urlActionControler <span class="type">[string]</span></td>
 						<td><span class="description">Url of ajax method to obtain elements</span></td>					
 					</tr>
 					<tr>
-						<td>withEmptyEntry <span class="type">[optionnal boolean]</span></td>
+						<td>p_withEmptyEntry <span class="type">[optionnal boolean]</span></td>
 						<td><span class="description">Boolean to define if empty entry is required. False by default</span></td>					
 					</tr>
 					<tr>
-						<td>selectedValue <span class="type">[optionnal string]</span></td>
+						<td>p_selectedValue <span class="type">[optionnal string]</span></td>
 						<td><span class="description">The selected value. Ignore by default</span></td>					
 					</tr>
+                    <tr>
+                        <td>p_jsonAjaxParameters <span class="type">[optionnal JSON Object]</span></td>
+                        <td><span class="description">JSON object sent to Ajax request. Ignore by default</span></td>
+                    </tr>
 				</table>	
 			</section>
 			
@@ -91,7 +92,11 @@
 					<tr>
 						<td>Basic usage of AntDropDownList</td>
 						<td><a href="samples/AntDropDownList.html" target="_blank">Try it</a></td>					
-					</tr>			
+					</tr>
+                    <tr>
+                        <td>AntDropDownList with supplied parameters to Ajax request</td>
+                        <td><a href="samples/AntDropDownList-with-parameter.html" target="_blank">Try it</a></td>
+                    </tr>
 				</table>			
 			</section>
 			<br />
@@ -178,6 +183,6 @@
 				</table>			
 			</section>
 		</article>
-		<footer>Copyright © 2014 <a href="http://antproduction.free.fr/" border="0">AntProduction</a>.</footer>
+		<footer>Copyright © 2014 <a href="http://antproduction.free.fr/">AntProduction</a>.</footer>
     </body>
 </html>

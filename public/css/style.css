@@ -8,7 +8,7 @@
 body {
     background-color: #333;
     /*border-top: solid 10px #000;*/
-    color: #333;
+    color: #343434;
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
@@ -25,12 +25,12 @@ a {
     text-decoration: none;
 }
 
-    a:link, a:visited, a:active { color: #333; }
+a:link, a:visited, a:active { color: #333; }
 
-    a:hover {
-        color: #aaa;
-        text-decoration: underline;
-    }
+a:hover {
+    color: #aaa;
+    text-decoration: underline;
+}
 
 header, footer, hgroup, nav, section { display: block; }
 
@@ -44,18 +44,18 @@ header, footer {
 }
 
 p, strong, mark, em {
-	color: #333;
+    color: #333;
     font-size: 100%;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
-	font-weight: normal;
+    font-weight: normal;
 }
 
-.blue, .type { color:#0500fd; }
+.blue, .type, a.blue { color:#0500fd; }
 
 strong.bold {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 mark {
@@ -83,11 +83,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	color: #e2e2e2;
+    color: #e2e2e2;
     font-size: 2em;
 }
 
-h2 { font-size: 1.75em; }
+h2 { font-size: 1.75em; margin-top: 10px; }
 
 h3 { font-size: 1.2em; }
 
@@ -107,27 +107,29 @@ header .menu-content {
     text-align: center;
 }
 
-.site-title, .library-version {    
-    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+.site-title, .library-version {
+    /*font-family: Consolas, "Courier New", Courier, monospace;*/
     margin: 0;
-	display:inline;
+    display:inline;
+    color:white;
 }
 .site-title {
-	color: #d3dce0;
-	font-size: 2.3em;
+    color: #d3dce0;
+    font-size: 2.3em;
+    font-style: italic;
 }
-	.site-title a, .site-title a:hover, .site-title a:active {
-        background: none;
-        color: #d3dce0;
-        outline: none;
-        text-decoration: none;
-    }
+.site-title a, .site-title a:hover, .site-title a:active {
+    background: none;
+    color: #d3dce0;
+    outline: none;
+    text-decoration: none;
+}
 
 .library-version {
-	color: #fff;
-	font-size: .8em;
+    color: #fff;
+    font-size: .8em;
 }
-    
+
 /* footer
 ----------------------------------------------------------*/
 footer {
@@ -135,9 +137,9 @@ footer {
     background-color: #252525;
     font-size: .8em;
     height: 30px;
-	color:#fff;
-	text-align:right;
-	padding-right: 10px;
+    color:#fff;
+    text-align:right;
+    padding-right: 10px;
 }
 
 footer a:hover, footer a:visited, footer a:link { color:white;}
@@ -152,7 +154,7 @@ footer a:hover, footer a:visited, footer a:link { color:white;}
 .main-content {
     padding-left: 10px;
     padding-top: 10px;
-	background-color: #efeeef;
+    background-color: #efeeef;
     clear: both;
     padding-bottom: 35px;
     min-height: 40em;
@@ -165,9 +167,9 @@ label {
     font-weight: 600;
 }
 
-    label.checkbox {
-        display: inline;
-    }
+label.checkbox {
+    display: inline;
+}
 
 input, textarea {
     border: 1px solid #e2e2e2;
@@ -184,9 +186,9 @@ textarea {
     width: 500px;
 }
 
-    input:focus, textarea:focus {
-        border: 1px solid #7ac0da;
-    }
+input:focus, textarea:focus {
+    border: 1px solid #7ac0da;
+}
 
 input[type="button"],
 button {
@@ -198,6 +200,12 @@ button {
     padding: 7px;
     margin-right: 8px;
     width: auto;
+}
+
+.breadCrumb {
+    margin-left: 30px;
+    font-size: 0.8em;
+    font-style: italic;
 }
 
 /* tables
@@ -215,28 +223,28 @@ th {
     border: none 0px;
     padding-left: 0;
 }
-    
+
 td {
     padding: 0.25em 2em 0.25em 1em;
     border: 1px solid #aaa;
-	vertical-align:top;
-	background-color: #fff;
+    vertical-align:top;
+    background-color: #fff;
 }
 
-	td  ul{
-		list-style-type: disc;
-		margin: 0em;
-		padding: 0em 0.8em 0.1em 0.8em;
-	}
-		td ul a .blue {
-			margin-left: -0.3em;
-		}
+td  ul{
+    list-style-type: disc;
+    margin: 0em;
+    padding: 0em 0.8em 0.1em 0.8em;
+}
+td ul a .blue {
+    margin-left: -0.3em;
+}
 
 .hidden, .Invisible { display:none; }
 .label { font-weight: 700; }
 .type, .description {
-	font-style: italic;
-	font-size: 0.9em;
-	display: inline-block;
+    font-style: italic;
+    font-size: 0.9em;
+    display: inline-block;
 }
 

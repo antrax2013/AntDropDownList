@@ -10,8 +10,6 @@ $cities['d'] = Array();
 
 if(stripos($_SERVER["CONTENT_TYPE"], "application/json") === 0) {
 	$_POST["parent"] = json_decode(file_get_contents("php://input"))->parent;
-	
-	//print_r($_POST["parent"]);
 }
 
 $id_pays =  (!isset($_POST['parent'])? 1 : $_POST['parent']);

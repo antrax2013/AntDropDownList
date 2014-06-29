@@ -2,7 +2,7 @@
 <html>
     <head>
 		<meta charset="utf-8" />
-        <title>Basic usage of AntDropDownList - AntProduction</title>
+        <title>Basic usage of AntDropDownList with parameters to Ajax request - AntProduction</title>
 		<meta content="AntDropDownList is part of AntLibrairies. AntMessageBox is a pre-defined jQuery ui-dialog encapsulated in JavaScript object." name="description">
 		<meta content="antproduction, jquery ui library, jquery, turnkey jquery ui library, javascript library, drop down list" name="keywords">
 		<meta name="author" content="Antrax2013">
@@ -17,15 +17,14 @@
 		<script type="text/javascript" src="../public/js/libs/external-libs/jquery-ui-1.10.4.min.js"></script>		
 		<script type="text/javascript" src="../public/js/libs/external-libs/google-analytics.js"></script>
 		<script type="text/javascript" src="../public/js/libs/AntDropDownList.js"></script>
-
 		
 		<script>
-  
 			//Sources code hightLight syntaxe
 			hljs.initHighlightingOnLoad();
-						
+
 			$(document).ready(function() {
-                LoadAntDropDownList($("#myList"), "../public/php/basic_list.php", true, 1);
+                var data = { "execpt" : "Dusty" }
+                LoadAntDropDownList($("#myList"), "../public/php/basic_list_filtred.php", null, null, data);
 			});
 		</script>
 	</head>
@@ -43,17 +42,19 @@
 		</header>
 		<article class="main-content clear-fix" id="body">
 			<section class="content-wrapper">
-                <h2>Basic usage of AntDropDownList</h2>
-				<p>AntDropDownList, is a custom DropDownList jQuery plugin. The aim is to supply easly a drop down list without dupplicate ajax parameters.</p>
-
-                <label for="myList">AntDropDownList</label>
+                <h2>AntDropDownList with parameters to Ajax request</h2>
+				<p>The aim of this sample of AntDropDownList, is to show how to supply parameter to the Ajax request.</p>
+                <p>The AntDropDownList, normaly contain Flash, Mater, Dusty and Sargent. With Ajax parameter, Dusty is removed.</p>
+                <br />
+                <label for="myList">AntDropDownList :</label>
 				<select id="myList"></select>
 			</section>
 			<section class="content-wrapper">
 				<h2>Source Code</h2>
 				<pre><code style="background-color:#fff">
 $(document).ready(function() {
-	LoadAntDropDownList($("#myList"), "../public/php/basic_list.php", true, 1);
+    var data = { "execpt" : "Dusty" } //JSON object supplied to Ajax request
+    LoadAntDropDownList($("#myList"), "../public/php/basic_list_filtred.php", null, null, data);
 });	
 						</code>
 					</pre>
