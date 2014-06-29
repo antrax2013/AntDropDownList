@@ -13,6 +13,9 @@ Have a question about AntDropDownList or AntPairedDropDownList ? Please use GitH
 
 <b>To try samples of AntPairedDropDownList on your cumputer, PHP web server is required.</b>
 
+AntDropDownList Release Note: V0.11 - 06/29/2014
+=============
+- Add possibility to supply Json object to Ajax request
 
 AntPairedDropDownList Release Note: V0.11 - 06/09/2014
 =============
