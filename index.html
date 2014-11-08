@@ -36,19 +36,22 @@
 		</header>
 		<article class="main-content clear-fix" id="body">
 			<section class="content-wrapper">
-				<p>AntDropDownList, is a custom DropDownList jQuery plugin.</p>
+                <h2>About of AntDropDownList library</h2>
+				<p>AntDropDownList, is a turnkey JavaScript objet containing a DropDownList.</p>
                 <p>2 avaliable types of AntDropDownList:</p>
 				<ul>
 					<li><a href="#Samples_AntDropDownList">AntDropDownList</a>: basic trunkey drop down list.</li>
-					<li><a href="#Samples_AntPairedDropDownList">AntPairedDropDownList</a>: master and slave drop down lists. Slave drop down list is filtred on change event of master drop down list fired.</li>
+					<li><a href="#Samples_AntPairedDropDownList">AntPairedDropDownList</a>: master and slave drop down lists. The Slave drop down list is filtred when change event of master fired.</li>
 				</ul>
+                <br />
+                <p>Have a question about AntDropDownList or AntPairedDropDownList ? <a href="https://github.com/antrax2013/AntDropDownList/issues" title="GitHub Issue of AntDropDownList">Please use GitHub Issue.</a></p>
 			</section>
 			<br />
 			<hr />
 			<br />
 			<section class="content-wrapper">
-				<h2>AntDropDownList</h2>
-				<p>It's basic trunkey drop down list. Elements are loaded by ajax.</p>
+				<h2>Documentation about AntDropDownList</h2>
+				<p>The basic trunkey drop down list. Elements are loaded by ajax.</p>
 
 				<table>
 					<tr>
@@ -66,7 +69,7 @@
 					</tr>
 					<tr>
 						<td>p_urlActionControler <span class="type">[string]</span></td>
-						<td><span class="description">Url of ajax method to obtain elements</span></td>					
+						<td><span class="description">Url of ajax method to fill the list</span></td>
 					</tr>
 					<tr>
 						<td>p_withEmptyEntry <span class="type">[optionnal boolean]</span></td>
@@ -74,17 +77,20 @@
 					</tr>
 					<tr>
 						<td>p_selectedValue <span class="type">[optionnal string]</span></td>
-						<td><span class="description">The selected value. Ignore by default</span></td>					
+						<td><span class="description">The selected value. Ignored by default</span></td>
 					</tr>
                     <tr>
                         <td>p_jsonAjaxParameters <span class="type">[optionnal JSON Object]</span></td>
-                        <td><span class="description">JSON object sent to Ajax request. Ignore by default</span></td>
+                        <td>
+                            <span class="description">JSON object sent to Ajax request. Ignored by default</span>
+                            <pre><code>usage : data = {"first-name":"McQueen", "last-name":"Flash"}</code></pre>
+                        </td>
                     </tr>
 				</table>	
 			</section>
 			
 			<section class="content-wrapper">
-				<h2 id="Samples_AntDropDownList">Samples</h2>
+				<h2 id="Samples_AntDropDownList">Samples about AntDropDownList</h2>
 				<table>
 					<tr>
 						<th colspan="2">AntDropDownList</th>
@@ -103,7 +109,7 @@
 			<hr />
 			<br />
 			<section class="content-wrapper">
-				<h2 id="AntPairedDropDownList">AntPairedDropDownList</h2>
+				<h2 id="AntPairedDropDownList">Documentation of AntPairedDropDownList</h2>
 				<p>JavaScript object to manage simply master and slave relation of 2 drop down lists. When master change event fired, the slave drop down list is filtred.</p>
 
 				<table>
@@ -153,7 +159,7 @@
 					<tr>
 						<td rowspan='1'>
 							<strong>FromDropDownListChange</strong>
-							<br /><span class="description">An accessor to define a custom callback function to change event of master drop down list </span>
+							<br /><span class="description">An accessor to define a custom callback function to modify the event of master drop down list </span>
 						</td>
 						<td>p_fn <span class="type">[function]</span></td>
 						<td><span class="description">The callback function fired on change event of master drop down list</span></td>					
@@ -162,7 +168,7 @@
 					<tr>
 						<td rowspan='1'>
 							<strong>ToDropDownListChange</strong>
-							<br /><span class="description">An accessor to define a custom callback function to change event of slave drop down list</span>
+							<br /><span class="description">An accessor to define a custom callback function to modify the event of slave drop down list</span>
 						</td>
 						<td>p_fn <span class="type">[function]</span></td>
 						<td><span class="description">The callback function fired on change event of slave drop down list</span></td>					
@@ -171,7 +177,7 @@
 				</table>
 			</section>
 			<section class="content-wrapper">
-				<h2 id="Samples_AntPairedDropDownList">Samples</h2>
+				<h2 id="Samples_AntPairedDropDownList">Samples of AntPairedDropDownList</h2>
 				<table>
 					<tr>
 						<th colspan="2">AntPairedDropDownList</th>

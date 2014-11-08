@@ -54,6 +54,8 @@ p, strong, mark, em {
 
 .blue, .type, a.blue { color:#0500fd; }
 
+strong {color: #2e2e2e;}
+
 strong.bold {
     font-weight: bold;
 }
@@ -140,6 +142,7 @@ footer {
     color:#fff;
     text-align:right;
     padding-right: 10px;
+    padding-top: 7px;
 }
 
 footer a:hover, footer a:visited, footer a:link { color:white;}
